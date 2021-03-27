@@ -1,13 +1,13 @@
 {
   "name": "front_kuroco_vuepress",
   "version": "0.0.1",
-  "description": "Vuepress generated Kuroco Website",
+  "description": "Kuroco website",
   "main": "index.js",
   "authors": {
-    "name": "Nuri",
+    "name": "nuri",
     "email": "nuri.yergozha@toptal.com"
   },
-  "repository": "/front_kuroco_vuepress",
+  "repository": "front_kuroco_vuepress/front_kuroco_vuepress",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"

@@ -34,30 +34,20 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Content',
+        link: '/content/'
       },
-      {
-        text: 'Documentation',
-        link: '/documentation/'
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
     ],
     sidebar: {
-      '/guide/': [
+      '/content/': [
         {
-          title: 'Guide',
+          title: 'ドキュメント',
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'api',
+            'tools',
+            'management/campaign'
           ]
         }
       ],
