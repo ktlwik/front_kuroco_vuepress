@@ -4,7 +4,7 @@
             <h2 class="c-block-intro__ttl">{{ category }}</h2>
             <div class="c-block-intro__link-area">
                 <a v-for="n in responseData" :key="n.key" :href="n.path" class="c-block-intro__link">
-                    <template v-if="n.frontmatter.category=== category ">
+                    <template v-if="category == 'その他' || n.frontmatter.category=== category ">
                         {{n.title}}
                     </template>
                 </a>

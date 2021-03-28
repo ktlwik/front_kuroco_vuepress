@@ -45,9 +45,12 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'documentation',
             'api',
             'tools',
-            'management'
+            'management',
+            'faq',
+            'reference'
           ]
         }
       ],

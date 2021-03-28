@@ -1,7 +1,6 @@
 <template>
     <div class="contents">
         <div class="column">
-            <DocumentationSidebar />
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
@@ -13,7 +12,7 @@
                             <p>FAQで解決しない場合は<span class="c-txt-attention"><a href="https://join.slack.com/t/kurocojp/shared_invite/zt-l6p3hkw0-vdqK5vjRdOEx9n_PoDXmzw">Kuroco Slackコミュニティ</a></span>へご参加ください。サポート担当者と直接やり取りすることができます。</P>
                         </div>
                         <div class="c-block-intro-wrapper">
-                            <!--
+                            
                             <List 
                                 :responseData="faq"
                                 category="kurocoについて"
@@ -22,16 +21,10 @@
                                 :responseData="faq"
                                 category="料金プランについて"
                             ></List>
-                            -->
-                            <!-- [/c-box-docs] -->
-                            
-                            <!-- TODO ドキュメント揃ったらcomponent化する-->
-                            <section id="anchor-1" class="c-box-docs">
-                                <div v-for="n in faq" :key="n.slug" class="c-block-intro__link-area">
-                                    <nuxt-link :to="'/documentations/faq/'+ n.slug" class="c-block-intro__link">{{n.title}}</nuxt-link>
-                                </div>
-                            </section>
-                            <!-- [/c-box-docs] -->
+                             <List 
+                                :responseData="faq"
+                                category="その他"
+                            ></List>
                         </div>
                     </div>
                 </div>
@@ -50,14 +43,21 @@ section.c-block-intro.c-block-intro--half {
 </style>
 
 <script>
-import List from "@/components/List";
+import List from "../List";
 export default {
-    async asyncData ({ $content, params }) {
-    const faq = await $content('faq', params.slug)
-        //.only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('weight', 'desc')
-        .fetch()
-    return { faq }
+    data () {
+      return {
+        faq: null
+      }
+    },
+    mounted() {
+        console.log(this.$site.pages)
+        var pages = this.$site.pages.filter((post) => {
+            console.log(post.path)
+            return post.path.startsWith("/content/faq/")
+        })
+        this.faq = pages
+        console.log(pages)
     },
     layout: 'documentation',
     components: {

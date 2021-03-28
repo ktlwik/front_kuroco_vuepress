@@ -1,19 +1,15 @@
 <template>
     <div class="contents">
         <div class="column">
-            <DocumentationSidebar />
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
                         <div class="c-chapter-docs__head">
                             <h1 class="c-ttl c-ttl--docs">{{tools.title}}</h1>
                         </div>
-                        <div class="c-chapter-docs__body wysiwyg">
-                            <section id="anchor-1" class="c-box-docs">
-                                <nuxt-content :document="tools" />
-                            </section>
-                            <!-- [/c-box-docs] -->
-                        </div>
+
+                        <Content slot-key="tools-Bar"/>
+                       
                     </div>
                 </div>
                 <!-- [/c-chapter-docs] -->
@@ -59,10 +55,19 @@ export default {
 
 <script>
 export default {
-  async asyncData ({ $content, params }) {
-    const tools = await $content('tools', params.slug || 'index').fetch()
-    return { tools }
-  },
+   data () {
+      return {
+        tools: null
+      }
+    },
+    mounted() {
+        var pages = this.$site.pages.filter((post) => {
+            console.log(post.path)
+            return post.path.startsWith("/content/tools/")
+        })
+        this.tools = pages[0]
+        console.log(pages.title)
+    },
   layout: 'documentation',
 }
 

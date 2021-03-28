@@ -12,7 +12,6 @@
                             <p>Kurocoの利用方法を説明します。</p>
                         </div>
                         <div class="c-block-intro-wrapper">
-                            <!--
                             <List 
                                 :responseData="reference"
                                 category="アカウント管理"
@@ -21,13 +20,6 @@
                                 :responseData="reference"
                                 category="コンテンツ管理"
                             ></List>
-                            -->
-                            <!-- TODO ドキュメント揃ったらcomponent化する-->
-                            <section id="anchor-1" class="c-box-docs">
-                                <div v-for="n in reference" :key="n.slug" class="c-block-intro__link-area">
-                                    <nuxt-link :to="'/documentations/reference/'+ n.slug" class="c-block-intro__link">{{n.title}}</nuxt-link>
-                                </div>
-                            </section>
                         </div>
                     </div>
                 </div>
@@ -46,15 +38,21 @@ section.c-block-intro.c-block-intro--half {
 </style>
 
 <script>
-import List from "@/components/List";
+import List from "../List";
 export default {
-    async asyncData ({ $content, params }) {
-        const reference = await $content('reference', params.slug)
-        .sortBy('weight', 'desc')
-        .fetch()
-        return { 
-            reference
-        }
+    data () {
+      return {
+        reference: null
+      }
+    },
+    mounted() {
+        console.log(this.$site.pages)
+        var pages = this.$site.pages.filter((post) => {
+            console.log(post.path)
+            return post.path.startsWith("/content/reference/")
+        })
+        this.reference = pages
+        console.log(pages)
     },
     layout: 'documentation',
     components: {
