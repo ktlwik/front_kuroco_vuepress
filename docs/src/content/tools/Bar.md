@@ -1,3 +1,4 @@
+::: slot tools
 ---
 title: ツール
 category: tools
@@ -13,3 +14,4 @@ Kurocoをより柔軟に使うためのツールを紹介します。
 ## フロントエンド
 - [Nuxt.js ドキュメント](https://ja.nuxtjs.org/)
 - [Gatsby.js ドキュメント](https://www.gatsbyjs.com/docs/)
+:::

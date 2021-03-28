@@ -5,11 +5,14 @@
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
                         <div class="c-chapter-docs__head">
-                            <h1 class="c-ttl c-ttl--docs">{{tools.title}}</h1>
+                            <h1 class="c-ttl c-ttl--docs">ツール</h1>
                         </div>
-
-                        <Content slot-key="tools-Bar"/>
-                       
+                        <div class="c-chapter-docs__body wysiwyg">
+                            <section id="anchor-1" class="c-box-docs">
+                                <Content slot-key="tools"/>
+                            </section>
+                            <!-- [/c-box-docs] -->
+                        </div>
                     </div>
                 </div>
                 <!-- [/c-chapter-docs] -->
@@ -55,7 +58,7 @@ export default {
 
 <script>
 export default {
-   data () {
+    data () {
       return {
         tools: null
       }
@@ -63,10 +66,10 @@ export default {
     mounted() {
         var pages = this.$site.pages.filter((post) => {
             console.log(post.path)
-            return post.path.startsWith("/content/tools/")
-        })
+            return post.path.startsWith("/content/tools")
+        }) 
         this.tools = pages[0]
-        console.log(pages.title)
+        console.log(this.$site.pages)
     },
   layout: 'documentation',
 }
