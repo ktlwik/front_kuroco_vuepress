@@ -6,11 +6,11 @@
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
                         <div class="c-chapter-docs__head">
-                            <h1 class="c-ttl c-ttl--docs">{{support.title}}</h1>
+                            <h1 class="c-ttl c-ttl--docs">サポート</h1>
                         </div>
                         <div class="c-chapter-docs__body wysiwyg">
                             <section id="anchor-1" class="c-box-docs">
-                                <nuxt-content :document="support" />
+                                <Content slot-key="support"/>
                             </section>
                             <!-- [/c-box-docs] -->
                         </div>

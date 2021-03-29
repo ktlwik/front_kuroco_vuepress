@@ -54,15 +54,3 @@ export default {
     line-height: 1.7;
 }
 </style>
-
-
-<script>
-import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
-export default {
-  layout: 'documentation', 
-  components: {
-    DocumentationSidebar, 
-  }
-}
-
-</script>

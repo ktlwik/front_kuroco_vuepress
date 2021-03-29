@@ -28,6 +28,11 @@ import Header from '@parent-theme/components/Navbar.vue'
 
 export default {
   name: 'Layout',
+   data () {
+    return {
+      isSidebarOpen: false
+    }
+  },
   components: {
     DocumentationHeader,
     DocumentationFooter,
@@ -44,6 +49,17 @@ export default {
         this.$localePath
       )
     },
+  },
+  mounted () {
+    this.$router.afterEach(() => {
+      this.isSidebarOpen = false
+    })
+  },
+  methods: {
+  	toggleSidebar (to) {
+      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+    },
+
   }
 }
 </script>

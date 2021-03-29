@@ -26,7 +26,7 @@
                     <nav class="header-docs-nav">
                         <ul class="header-docs-nav__list">
                             <li class="header-docs-nav__list-item">
-                                <a href="/documentations/support" class="header-docs-nav__link">サポート</a>
+                                <a href="/content/support" class="header-docs-nav__link">サポート</a>
                             </li>
                             <li class="header-docs-nav__list-item header-docs-nav__list-item--opa">
 

@@ -1,7 +1,6 @@
 <template>
     <div class="contents">
         <div class="column">
-            <DocumentationSidebar />
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
