@@ -45,6 +45,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'about',
             'documentation',
             'api',
             'tools',
