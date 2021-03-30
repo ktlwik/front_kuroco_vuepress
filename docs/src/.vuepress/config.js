@@ -44,7 +44,7 @@ module.exports = {
           title: 'ドキュメント',
           collapsable: false,
           children: [
-            '',
+            'main-about',
             'about',
             'documentation',
             'api',

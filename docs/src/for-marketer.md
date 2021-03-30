@@ -1,4 +1,4 @@
 ---
 layout: LayoutMain
 ---
-<main-index/>
+<main-for-marketer/>
