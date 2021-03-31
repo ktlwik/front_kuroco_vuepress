@@ -5,5 +5,5 @@ layout: LayoutDocumentationMain
 ::: slot api
 ## API
  
-[API](/content/api)
+[API](/documentations/api)
 ::: 

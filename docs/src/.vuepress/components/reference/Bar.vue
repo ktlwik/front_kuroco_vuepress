@@ -48,7 +48,7 @@ export default {
         console.log(this.$site.pages)
         var pages = this.$site.pages.filter((post) => {
             console.log(post.path)
-            return post.path.startsWith("/content/reference/")
+            return post.path.startsWith("/documentations/reference/")
         })
         this.reference = pages
         console.log(pages)

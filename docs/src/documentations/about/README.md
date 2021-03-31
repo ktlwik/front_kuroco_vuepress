@@ -31,7 +31,7 @@ KurocoとはAPIファーストのHeadless CMSです。
 
 ## もっとKurocoを知るために
 より詳しい使い方はドキュメントに記載しています。ぜひご覧ください。
-- [Kurocoドキュメント トップへ](/content/documentations/)
+- [Kurocoドキュメント トップへ](/documentations)
 
 ドキュメントだけでは解決しない場合はぜひSlackコミュニティにご参加ください。サポート担当チームと直接やりとりができます。
 - [Kuroco Slackコミュニティへ](https://join.slack.com/t/kurocojp/shared_invite/zt-l6p3hkw0-vdqK5vjRdOEx9n_PoDXmzw)

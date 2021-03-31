@@ -34,17 +34,17 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Content',
-        link: '/content/'
+        text: 'Documentations',
+        link: '/documentations/'
       },
     ],
     sidebar: {
-      '/content/': [
+      '/documentations/': [
         {
           title: 'ドキュメント',
           collapsable: false,
           children: [
-            'about',
+            '',
             'documentation',
             'api',
             'tools',

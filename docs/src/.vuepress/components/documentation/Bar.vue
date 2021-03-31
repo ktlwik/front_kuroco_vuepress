@@ -20,7 +20,7 @@
                             <TopPrimarylist
                                 title="Kurocoとは" 
                                 description="Kurocoで何ができるのか、Kurocoの特徴をお伝えします。"
-                                url="/content/about"
+                                url="/documentations/about"
                                 urltitle="Kurocoについて"
                                 imglight="/files/user/img/documentation/image_5.png"
                                 imglightalt="Kurocoとは"
@@ -32,7 +32,7 @@
                             <TopPrimarylist
                                 title="管理画面マニュアル" 
                                 description="柔軟で多機能な管理画面を用意しています。独自に拡張、パーソナライズ可能です。"
-                                url="/content/management"
+                                url="/documentations/management"
                                 urltitle="管理画面マニュアルを表示"
                                 imglight="/files/user/img/documentation/image22.png"
                                 imglightalt="管理画面マニュアル"
@@ -44,25 +44,25 @@
                             <TopSecondlist
                                 title="API" 
                                 description="Kurocoで作成したコンテンツはAPI経由で取得できます。APIの利用方法を説明します。"
-                                url="/content/api"
+                                url="/documentations/api"
                                 urltitle="APIを表示"
                             ></TopSecondlist>
                             <TopSecondlist
                                 title="リファレンス" 
                                 description="Kurocoの利用方法、拡張方法を説明します。"
-                                url="/content/reference"
+                                url="/documentations/reference"
                                 urltitle="リファレンスを表示"
                             ></TopSecondlist>
                             <TopSecondlist
                                 title="ツール" 
                                 description="Kurocoをより柔軟に使うためのツールを紹介します。"
-                                url="/content/tools"
+                                url="/documentations/tools"
                                 urltitle="ツールを表示"
                             ></TopSecondlist>
                             <TopSecondlist
                                 title="FAQ" 
                                 description="よくある質問とその回答を紹介します。"
-                                url="/content/faq"
+                                url="/documentations/faq"
                                 urltitle="FAQを表示"
                             ></TopSecondlist>
                             <!-- [/c-block-intro] -->

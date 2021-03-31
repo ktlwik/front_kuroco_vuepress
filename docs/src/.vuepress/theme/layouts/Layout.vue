@@ -72,6 +72,7 @@ export default {
   	toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
     },
+    
 
   }
 }

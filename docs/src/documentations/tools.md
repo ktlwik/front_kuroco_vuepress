@@ -6,7 +6,7 @@ layout: LayoutDocumentationMain
 
 Kurocoをより柔軟に使うためのツールを紹介します。
 ### ガイド
-- [AWSガイドライン](/content/documentation)
+- [AWSガイドライン](/documentations)
 - [Fastly ImageOpimaizer](https://developer.fastly.com/reference/io/#query-parameters)
 - [Firebase ドキュメント](https://firebase.google.com/docs?hl=ja)
 

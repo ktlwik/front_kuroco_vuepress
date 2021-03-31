@@ -79,7 +79,7 @@ export default {
         console.log(this.$site.pages)
         var pages = this.$site.pages.filter((post) => {
             console.log(post.path)
-            return post.path.startsWith("/content/management/")
+            return post.path.startsWith("/documentations/management/")
         })
         this.management = pages
         console.log(pages)
