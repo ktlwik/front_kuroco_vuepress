@@ -1,4 +1,6 @@
-
+---
+layout: LayoutDocumentationMain
+---
 <support-Bar/>
 
 ::: slot support

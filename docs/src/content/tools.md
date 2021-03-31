@@ -1,4 +1,6 @@
-
+---
+layout: LayoutDocumentationMain
+---
 <tools-Bar/>
 ::: slot tools
 

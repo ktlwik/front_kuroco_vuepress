@@ -1,4 +1,6 @@
-
+---
+layout: LayoutDocumentationMain
+---
 <about-Bar/>
 
 ::: slot about

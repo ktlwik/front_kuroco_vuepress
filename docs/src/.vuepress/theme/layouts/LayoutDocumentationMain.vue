@@ -1,5 +1,18 @@
 <template>
-   <div id="global-layout">
+   <div id="documentation-layout">
+   	<DocumentationHeader/>
+  	<Sidebar
+      :items="sidebarItems"
+      @toggle-sidebar="toggleSidebar"
+    >
+      <template #top>
+        <slot name="sidebar-top" />
+      </template>
+      <template #bottom>
+        <slot name="sidebar-bottom" />
+      </template>
+    </Sidebar>
+    
     <Content/>
     <DocumentationFooter/>
   </div>
@@ -15,7 +28,7 @@ import { resolveSidebarItems } from '@parent-theme/util'
 import Header from '@parent-theme/components/Navbar.vue'
 
 export default {
-  name: 'Layout',
+  name: 'LayoutDocumentationMain',
    data () {
     return {
       isSidebarOpen: false

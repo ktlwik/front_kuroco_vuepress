@@ -1,1 +1,4 @@
+---
+layout: LayoutDocumentationMain
+---
 <management-Bar/>
