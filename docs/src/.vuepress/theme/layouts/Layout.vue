@@ -1,19 +1,9 @@
 <template>
-   <div id="global-layout">
-   	<DocumentationHeader/>
-  	<Sidebar
-      :items="sidebarItems"
-      @toggle-sidebar="toggleSidebar"
-    >
-      <template #top>
-        <slot name="sidebar-top" />
-      </template>
-      <template #bottom>
-        <slot name="sidebar-bottom" />
-      </template>
-    </Sidebar>
+   <div id="wrapper">
+   <DocumentationHeader/>
    <div class="contents">
         <div class="column">
+            <DocumentationSidebar/>
             <div class="main">
                 <div class="wysiwyg">
                         <div class="c-chapter-docs__head">
@@ -28,15 +18,12 @@
     </div>
     <DocumentationFooter/>
   </div>
-
 </template>
 
 <script>
 import DocumentationHeader from '@theme/components/DocumentationHeader.vue'
 import DocumentationFooter from '@theme/components/DocumentationFooter.vue'
 import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
-import Sidebar from '@parent-theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '@parent-theme/util'
 import Header from '@parent-theme/components/Navbar.vue'
 
 export default {
@@ -51,37 +38,12 @@ export default {
     DocumentationFooter,
     DocumentationSidebar,
     Header,
-    Sidebar
   },
-  computed: {
-  	 sidebarItems () {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
-      )
-    },
-  },
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
-  },
-  methods: {
-  	toggleSidebar (to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    },
-    
-
-  }
 }
 </script>
 
 
 
 <style>
-.sidebar {
-}
 
 </style>

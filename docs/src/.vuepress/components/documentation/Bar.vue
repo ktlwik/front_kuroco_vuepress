@@ -1,6 +1,7 @@
 <template>
     <div class="contents">
         <div class="column">
+                <DocumentationSidebar/>
                 <div class="main">
                     <div class="c-chapter-docs">
                         <div class="c-chapter-docs__container">
@@ -86,11 +87,13 @@
 <script>
 import TopPrimarylist from "../TopPrimarylist";
 import TopSecondlist from "../TopSecondlist";
+import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
 export default {
   layout: 'documentation',
   components: {
       TopPrimarylist,
       TopSecondlist,
+      DocumentationSidebar
    },
 }
 </script>

@@ -1,4 +1,4 @@
 ---
-layout: LayoutMain
+layout: LayoutDeveloper
 ---
 <main-index/>

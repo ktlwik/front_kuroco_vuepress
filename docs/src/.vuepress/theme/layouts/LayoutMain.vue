@@ -1,61 +1,32 @@
 <template>
-  <div id="main-layout">
+  <div class="wrapper">
+    <Header/>
     <Content/>
-    <DocumentationFooter/>
+    <Footer/>
   </div>
 
 </template>
 
 <script>
+import Header from '@theme/components/Header.vue'
+import Footer from '@theme/components/Footer.vue'
 import DocumentationHeader from '@theme/components/DocumentationHeader.vue'
 import DocumentationFooter from '@theme/components/DocumentationFooter.vue'
 import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
-import Sidebar from '@parent-theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '@parent-theme/util'
-import Header from '@parent-theme/components/Navbar.vue'
 
 export default {
   name: 'LayoutMain',
-   data () {
-    return {
-      isSidebarOpen: false
-    }
-  },
   components: {
     DocumentationHeader,
     DocumentationFooter,
     DocumentationSidebar,
     Header,
-    Sidebar
+    Footer,
   },
-  computed: {
-  	 sidebarItems () {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
-      )
-    },
-  },
-  mounted () {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false
-    })
-  },
-  methods: {
-  	toggleSidebar (to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    },
-
-  }
 }
 </script>
 
 
 
 <style>
-.sidebar {
-}
-
 </style>

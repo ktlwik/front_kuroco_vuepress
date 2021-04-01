@@ -1,6 +1,7 @@
 <template>
     <div class="contents">
         <div class="column">
+            <DocumentationSidebar/>
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
@@ -20,3 +21,12 @@
         <!-- [/column] -->
     </div>
 </template>
+<script>
+import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
+export default {
+  layout: 'api',
+  components: {
+      DocumentationSidebar
+   },
+}
+</script>

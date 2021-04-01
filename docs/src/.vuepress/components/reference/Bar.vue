@@ -1,6 +1,7 @@
 <template>
     <div class="contents">
         <div class="column">
+            <DocumentationSidebar/>
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
@@ -38,6 +39,7 @@ section.c-block-intro.c-block-intro--half {
 
 <script>
 import List from "../List";
+import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
 export default {
     data () {
       return {
@@ -56,6 +58,7 @@ export default {
     layout: 'documentation',
     components: {
         List,
+        DocumentationSidebar
     },
 }
 </script>

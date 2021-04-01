@@ -1,4 +1,0 @@
----
-layout: LayoutDocumentationMain
----
-<documentation-Bar/>

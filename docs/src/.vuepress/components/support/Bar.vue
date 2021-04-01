@@ -25,9 +25,14 @@
 </template>
 
 <script>
+import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
 export default {
-  layout: 'documentation',
+    layout: 'documentation', 
+    components: {
+        DocumentationSidebar 
+    },
 }
+
 </script>
 
 <style scoped>
@@ -56,14 +61,3 @@ export default {
 }
 </style>
 
-
-<script>
-export default {
-  async asyncData ({ $content, params }) {
-    const support = await $content('support', params.slug || 'index').fetch()
-    return { support }
-  },
-  layout: 'documentation',
-}
-
-</script>

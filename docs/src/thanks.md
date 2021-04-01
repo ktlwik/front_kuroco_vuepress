@@ -1,0 +1,4 @@
+---
+layout: LayoutMain
+---
+<main-thanks/>

@@ -1,6 +1,7 @@
 <template>
     <div class="contents">
         <div class="column">
+            <DocumentationSidebar/>
             <div class="main">
                 <div class="c-chapter-docs">
                     <div class="c-chapter-docs__container">
@@ -57,6 +58,7 @@ export default {
 
 
 <script>
+import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
 export default {
     data () {
       return {
@@ -71,7 +73,10 @@ export default {
         this.tools = pages[0]
         console.log(this.$site.pages)
     },
-  layout: 'documentation',
+    layout: 'documentation',
+    components: {
+        DocumentationSidebar
+    },
 }
 
 </script>

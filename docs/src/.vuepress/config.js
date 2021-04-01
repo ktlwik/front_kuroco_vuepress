@@ -44,13 +44,13 @@ module.exports = {
           title: 'ドキュメント',
           collapsable: false,
           children: [
-            '',
-            'documentation',
-            'api',
-            'tools',
-            'management',
-            'faq',
-            'reference'
+            ['', 'ホーム'],
+            ['about', 'Kurocoについて'],
+            ['management', '管理画面マニュアル'],
+            ['api', 'API'],
+            ['reference', 'リファレンス'],
+            ['tools', 'ツール'],
+            ['faq', 'FAQ']
           ]
         }
       ],
