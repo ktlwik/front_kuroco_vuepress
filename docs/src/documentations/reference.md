@@ -1,4 +1,5 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<reference-Bar/>
+
+<reference-index/>

@@ -1,7 +1,7 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<api-Bar/>
+<api-index/>
 ::: slot api
 ## API
  

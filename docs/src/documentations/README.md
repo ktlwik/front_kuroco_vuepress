@@ -1,4 +1,5 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<documentation-Bar/>
+
+<documentation-index/>

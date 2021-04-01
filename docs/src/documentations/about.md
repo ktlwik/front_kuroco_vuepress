@@ -1,7 +1,7 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<about-Bar/>
+<about-index/>
 
 ::: slot about
 

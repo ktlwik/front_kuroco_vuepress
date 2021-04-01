@@ -1,7 +1,8 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<support-Bar/>
+
+<support-index/>
 
 ::: slot support
 

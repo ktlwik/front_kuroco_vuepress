@@ -2,4 +2,4 @@
 layout: LayoutDocumentationMain
 ---
 
-<faq-Bar/>
+<faq-index/>

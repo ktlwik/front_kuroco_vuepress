@@ -1,4 +1,5 @@
 ---
 layout: LayoutDocumentationMain
 ---
-<management-Bar/>
+
+<management-index/>
