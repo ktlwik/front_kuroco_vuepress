@@ -24,20 +24,13 @@
 import DocumentationHeader from '@theme/components/DocumentationHeader.vue'
 import DocumentationFooter from '@theme/components/DocumentationFooter.vue'
 import DocumentationSidebar from '@theme/components/DocumentationSidebar.vue'
-import Header from '@parent-theme/components/Navbar.vue'
 
 export default {
   name: 'Layout',
-   data () {
-    return {
-      isSidebarOpen: false
-    }
-  },
   components: {
     DocumentationHeader,
     DocumentationFooter,
     DocumentationSidebar,
-    Header,
   },
 }
 </script>
