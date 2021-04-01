@@ -44,7 +44,7 @@
                             <a href="/documentations/about" class="sidebar__list-link">Kurocoについて</a>
                         </li>
                         <li class="sidebar__list-item">
-                            <nuxt-link to="/documentations/management" class="sidebar__list-link">管理画面マニュアル</nuxt-link>
+                            <a href="/documentations/management" class="sidebar__list-link">管理画面マニュアル</a>
                         </li>
                         <li class="sidebar__list-item">
                             <a href="/documentations/api" class="sidebar__list-link">API</a>
