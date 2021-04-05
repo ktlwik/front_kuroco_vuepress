@@ -77,11 +77,7 @@ module.exports = {
         }
       ],
     }
-  },
-  extraWatchFiles: [
-    '/files/js/front/user/lib/lib.js',
-    '/files/js/front/user/common.js'
-  ]
+  }
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
