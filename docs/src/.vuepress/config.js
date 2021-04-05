@@ -15,17 +15,31 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
-  head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
-  ],
-
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
+  head: [
+    [ 
+        'meta', { charset: 'utf-8',},
+    ],
+    [
+        'meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
+    [
+        'link', {
+            rel: "stylesheet", 
+            href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@500;600;700&family=Karla&display=swap" 
+        }
+    ],
+    [
+        'script',{ src: '/files/js/front/user/lib/lib.js',},
+    ],
+    [
+        'script',{ src: '/files/js/front/user/common.js',},
+    ],
+  ],
   themeConfig: {
     repo: '',
     editLinks: false,
@@ -60,8 +74,4 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-  ]
 }

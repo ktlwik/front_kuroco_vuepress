@@ -1,9 +1,9 @@
 <template>
-    <aside class="sidebar2">
-            <div class="sidebar2__container">
-                <div class="sidebar2__head">
+    <aside class="sidebar">
+            <div class="sidebar__container">
+                <div class="sidebar__head">
                     <!--<span class="sidebar__ttl">Documentation</span>-->
-                    <span class="sidebar2__ttl">ドキュメント</span>
+                    <span class="sidebar__ttl">ドキュメント</span>
                 </div>
                 <!--
                 <div class="sidebar__body">
@@ -35,10 +35,10 @@
                     </ul>
                 </div>
                 -->
-                <div class="sidebar2__body">
-                    <ul class="sidebar2__list">
-                        <li v-for="item in sidebarItems[0].children" class="sidebar2__list-item">
-                            <a :href="item.path" class="sidebar2__list-link">{{item.title}}</a> 
+                <div class="sidebar__body">
+                    <ul class="sidebar__list">
+                        <li v-for="item in sidebarItems[0].children" class="sidebar__list-item">
+                            <a :href="item.path" class="sidebar__list-link">{{item.title}}</a> 
                         </li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { resolveSidebarItems } from '@parent-theme/util'
+import { resolveSidebarItems } from '@theme/util'
 
 export default {
    name: 'LayoutDocumentationMain',
