@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Kuroco',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -34,6 +34,13 @@ module.exports = {
         }
     ],
     [
+        'link', { 
+          rel: "icon", 
+          type: "image/x-icon",
+           href: "/favicon.ico" 
+        }
+    ],
+    [
         'script',{ src: '/files/js/front/user/lib/lib.js',},
     ],
     [
@@ -42,6 +49,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: '',
+    activeHeaderLinks: false,
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -70,7 +78,10 @@ module.exports = {
       ],
     }
   },
-
+  extraWatchFiles: [
+    '/files/js/front/user/lib/lib.js',
+    '/files/js/front/user/common.js'
+  ]
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */

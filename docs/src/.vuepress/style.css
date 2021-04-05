@@ -33,6 +33,10 @@ time, mark, audio, video, hr {
   font-size: 100%;
   vertical-align: baseline; }
 
+a.header-anchor {
+    display: none
+}
+
 html {
   line-height: 1; }
 

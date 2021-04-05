@@ -55,7 +55,6 @@ The file will contain a JSON configuration object like below :
 #### :question: Where can I get my SDK key ?
 
 The `sdk_key` can be found on the API List page of your Kuroco management interface.
-![token](@/assets/img/token.png)
 
 ---
 

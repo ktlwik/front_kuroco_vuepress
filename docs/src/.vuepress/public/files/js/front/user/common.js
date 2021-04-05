@@ -304,12 +304,11 @@ $(function () {
 $(function () {
     'use strict';
     var sidebar = '.sidebar__container',
-        target =  '.footer', // footerが停止する要素
+        target = '.footer', // footerが停止する要素
         threshold = $('.header-docs').innerHeight(), // 表示が切り替わる(フェード)スクロール量(任意)
         fixedClass = 'is-fixed',
         stopClass = 'is-stop';
 
-    console.log(target)
     sidebarFnc();
 
     $(window).on('scroll', function () {
@@ -327,7 +326,6 @@ $(function () {
             $(sidebar).removeClass(fixedClass);
         }
 
-        console.log(threshold)
         var scrollSet = st + $(sidebar).innerHeight(),
             targetOffset = $(target).offset().top;
 
