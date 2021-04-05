@@ -79,13 +79,15 @@ export default {
       }
     },
     mounted() {
-        console.log(this.$site.pages)
         var pages = this.$site.pages.filter((post) => {
-            console.log(post.path)
             return post.path.startsWith("/documentations/management/")
+        }).sort(function(a, b){
+            if (a.frontmatter.weight>b.frontmatter.weight) {
+                return -1
+            } 
+            return 1;
         })
         this.management = pages
-        console.log(pages)
     },
     layout: 'documentation',
     components: {
