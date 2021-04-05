@@ -48,7 +48,6 @@ export default {
     },
     mounted() {
         var pages = this.$site.pages.filter((post) => {
-            console.log(post.path)
             return post.path.startsWith("/documentations/reference/")
         }).sort(function(a, b){
             if (a.frontmatter.weight>b.frontmatter.weight) {

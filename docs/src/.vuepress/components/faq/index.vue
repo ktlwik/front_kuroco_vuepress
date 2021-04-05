@@ -54,13 +54,10 @@ export default {
       }
     },
     mounted() {
-        console.log(this.$site.pages)
         var pages = this.$site.pages.filter((post) => {
-            console.log(post.path)
             return post.path.startsWith("/documentations/faq/")
         })
         this.faq = pages
-        console.log(pages)
     },
     layout: 'documentation',
     components: {

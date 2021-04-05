@@ -67,11 +67,9 @@ export default {
     },
     mounted() {
         var pages = this.$site.pages.filter((post) => {
-            console.log(post.path)
             return post.path.startsWith("/documentations/tools")
         }) 
         this.tools = pages[0]
-        console.log(this.$site.pages)
     },
     layout: 'documentation',
     components: {
