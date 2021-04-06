@@ -4,7 +4,7 @@
             <h2 class="c-block-intro__ttl">{{ title }}</h2>
             <p class="c-block-intro__txt c-block-intro__txt--half">{{ description }}</p>
             <div class="c-block-intro__link-area">
-                <a :href="url" class="c-block-intro__link">{{ urltitle }}</a>
+                <router-link :to="url" class="c-block-intro__link"> {{ urltitle }} </router-link>
             </div>
         </div>
     </section>

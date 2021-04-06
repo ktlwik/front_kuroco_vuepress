@@ -22,6 +22,7 @@
     "cocoen": "^2.0.5",
     "core-js": "^3.10.0",
     "remark-emoji": "^2.1.0",
-    "stylus": "^0.54.8"
+    "stylus": "^0.54.8",
+    "vuepress-plugin-clean-urls": "^1.1.2"
   }
 }

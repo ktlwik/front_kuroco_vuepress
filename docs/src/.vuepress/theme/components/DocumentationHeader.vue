@@ -4,11 +4,11 @@
             <div class="header-docs-container">
 
                 <div class="header-docs-logo">
-                    <a href="/documentations" class="header-docs-logo__link">Kuroco</a>
+                    <router-link to="/documentations" class="header-docs-logo__link">Kuroco</router-link>
                 </div>
                 <!-- [/header-docs-logo] -->
 
-                <a href="/" class="header-docs-back-link">Back to website</a>
+                <router-link to="/" class="header-docs-back-link">Back to website</router-link>
                 <!-- [/header-docs-back-link] -->
 
                 <div class="header-docs-sub-container">
@@ -26,7 +26,7 @@
                     <nav class="header-docs-nav">
                         <ul class="header-docs-nav__list">
                             <li class="header-docs-nav__list-item">
-                                <a href="/documentations/support" class="header-docs-nav__link">サポート</a>
+                                <router-link to="/documentations/support" class="header-docs-nav__link">サポート</router-link>
                             </li>
                             <li class="header-docs-nav__list-item header-docs-nav__list-item--opa">
 

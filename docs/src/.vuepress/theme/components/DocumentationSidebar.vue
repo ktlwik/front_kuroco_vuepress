@@ -38,7 +38,7 @@
                 <div class="sidebar__body">
                     <ul class="sidebar__list">
                         <li v-for="item in sidebarItems[0].children" class="sidebar__list-item">
-                            <a :href="item.path" class="sidebar__list-link">{{item.title}}</a> 
+                            <router-link :to="item.path" class="sidebar__list-link">{{item.title}}</router-link> 
                         </li>
                     </ul>
                 </div>

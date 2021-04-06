@@ -6,7 +6,7 @@
             <div class="footer-top">
 
                 <p class="footer-logo">
-                    <a href="/" class="footer-logo__link">Kuroco</a>
+                    <router-link to="/" class="footer-logo__link">Kuroco</router-link>
                 </p>
                 <!-- [/footer-logo] -->
 
@@ -25,13 +25,13 @@
                             <nav class="footer-nav">
                                 <ul class="footer-nav__list">
                                     <li class="footer-nav__list-item">
-                                        <a href="/documentations" class="footer-nav__link">Documentation</a>
+                                        <router-link to="/documentations" class="footer-nav__link">Documentation</router-link>
                                     </li>
                                     <li class="footer-nav__list-item">
-                                        <a href="/documentations/support" class="footer-nav__link">Support</a>
+                                        <router-link to="/documentations/support" class="footer-nav__link">Support</router-link>
                                     </li>
                                     <li class="footer-nav__list-item">
-                                        <a href="/about" class="footer-nav__link">About</a>
+                                        <router-link to="/about" class="footer-nav__link">About</router-link>
                                     </li>
                                 </ul>
                             </nav>

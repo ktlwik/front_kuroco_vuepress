@@ -8,6 +8,14 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
+  plugins: [
+      [
+          'vuepress-plugin-clean-urls',
+          {
+          
+          },
+      ],
+  ],
   description: description,
 
   /**
@@ -54,6 +62,11 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    algolia: {
+      apiKey: '15a0a568f6dc51be04ef92f0e4b88412',
+      indexName: 'Kuroco',
+      appId: 'SBOZBGA2QZ'
+    },
     nav: [
       {
         text: 'Documentations',
@@ -77,8 +90,9 @@ module.exports = {
         }
       ],
     }
-  }
+  },
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
+
 }
