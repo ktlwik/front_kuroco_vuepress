@@ -69,9 +69,9 @@ module.exports = {
     editLinkText: '',
     lastUpdated: false,
     algolia: {
-      apiKey: '15a0a568f6dc51be04ef92f0e4b88412',
-      indexName: 'Kuroco',
-      appId: 'SBOZBGA2QZ'
+      apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+      indexName: 'docsearch',
+      // appId: ''
     },
     nav: [
       {
