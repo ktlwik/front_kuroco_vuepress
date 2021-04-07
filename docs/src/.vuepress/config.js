@@ -15,6 +15,12 @@ module.exports = {
           
           },
       ],
+      [
+          '@vuepress/search', 
+          {
+            searchMaxSuggestions: 10
+          }
+      ]
   ],
   description: description,
 

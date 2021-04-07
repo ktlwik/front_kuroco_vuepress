@@ -181,7 +181,7 @@ $(window).on('load', function () {
     'use strict';
     var toggle = '.js-color-toggle',
         activeClass = 'is-dark';
-
+    console.log(toggle)
     $(toggle).on('click', function () {
         console.log('heres')
         if ($(this).prop('checked') == true) {
@@ -195,13 +195,7 @@ $(window).on('load', function () {
         }
     });
 
-    var colorMode = localStorage.getItem('colorMode');
-
-    if (colorMode === 'dark' && $(toggle).prop('checked') == false) {
-        $(toggle).click();
-    } else if ($(toggle).prop('checked') == true) {
-        $('body').addClass(activeClass);
-    }
+   
 });
 
 /* ---------------------------------------------

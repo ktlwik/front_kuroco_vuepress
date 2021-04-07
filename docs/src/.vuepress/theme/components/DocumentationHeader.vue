@@ -11,16 +11,21 @@
                 <router-link to="/" class="header-docs-back-link">Back to website</router-link>
                 <!-- [/header-docs-back-link] -->
 
+                
                 <div class="header-docs-sub-container">
-
+                     <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
+                    <!-- 
                     <form class="header-docs-form" action="dummy" method="get">
                         <div class="header-docs-form__inner">
                             <input class="header-docs-form__box" name="dummy" placeholder="検索" type="text"/>
+                          
                             <button type="submit" class="header-docs-form__btn">
                                 <span class="header-docs-form__btn-icon">search</span>
                             </button>
+                            
                         </div>
                     </form>
+                    -->
                     <!-- [/header-docs-form] -->
 
                     <nav class="header-docs-nav">
@@ -94,47 +99,21 @@
         </header>
 </template>
 
-<style lang="stylus">
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
-    display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
-    .links
-      padding-left 1.5rem
-    .site-name
-      width calc(100vw - 9.4rem)
-      overflow hidden
-      white-space nowrap
-      text-overflow ellipsis
-</style>
+<script>
+import SearchBox from '@SearchBox'
+import AlgoliaSearchBox from "./AlgoliaSearchBox";
+
+export default {
+  components: { SearchBox, AlgoliaSearchBox },
+  computed: {
+    algolia() {
+      return (
+        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+      );
+    },
+    isAlgoliaSearch() {
+      return this.algolia && this.algolia.apiKey && this.algolia.indexName;
+    }
+  }
+}
+</script>
