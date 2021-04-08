@@ -1,5 +1,5 @@
 const { description } = require('../../package')
-
+const pageSuffix = '/'
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -8,20 +8,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  plugins: [
-      [
-          'vuepress-plugin-clean-urls',
-          {
-          
-          },
-      ],
-      [
-          '@vuepress/search', 
-          {
-            searchMaxSuggestions: 10
-          }
-      ]
-  ],
+ 
   description: description,
 
   /**
@@ -53,7 +40,8 @@ module.exports = {
           type: "image/x-icon",
            href: "/favicon.ico" 
         }
-    ],
+    ],  
+    ['script', {src: 'https://code.jquery.com/jquery-3.4.1.min.js'}],
     [
         'script',{ src: '/files/js/front/user/lib/lib.js',},
     ],
@@ -71,7 +59,7 @@ module.exports = {
     algolia: {
       apiKey: '25626fae796133dc1e734c6bcaaeac3c',
       indexName: 'docsearch',
-      // appId: ''
+      //appId: ''
     },
     nav: [
       {
@@ -100,5 +88,18 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-
+ plugins: [
+      [
+          'vuepress-plugin-clean-urls',
+          {
+          
+          },
+      ],
+      [
+          '@vuepress/search', 
+          {
+            searchMaxSuggestions: 10
+          }
+      ]
+  ],
 }

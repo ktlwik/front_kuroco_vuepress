@@ -181,11 +181,12 @@ $(window).on('load', function () {
     'use strict';
     var toggle = '.js-color-toggle',
         activeClass = 'is-dark';
-
+    console.log(toggle)
     $(toggle).on('click', function () {
+        console.log('heres')
         if ($(this).prop('checked') == true) {
-            $('body').addClass(activeClass);
             // localStorage にデータを保存する
+            $('body').addClass(activeClass);
             localStorage.setItem('colorMode', 'dark');
         } else {
             $('body').removeClass(activeClass);
@@ -194,13 +195,7 @@ $(window).on('load', function () {
         }
     });
 
-    var colorMode = localStorage.getItem('colorMode');
-
-    if (colorMode === 'dark' && $(toggle).prop('checked') == false) {
-        $(toggle).click();
-    } else if ($(toggle).prop('checked') == true) {
-        $('body').addClass(activeClass);
-    }
+   
 });
 
 /* ---------------------------------------------
@@ -298,3 +293,44 @@ $(function () {
     }
 });
 
+/* ---------------------------------------------
+*   Sidebar : headerを超えたらfixed / footerの直上で固定
+--------------------------------------------- */
+$(function () {
+    'use strict';
+    var sidebar = '.sidebar__container',
+        target = '.footer', // footerが停止する要素
+        threshold = $('.header-docs').innerHeight(), // 表示が切り替わる(フェード)スクロール量(任意)
+        fixedClass = 'is-fixed',
+        stopClass = 'is-stop';
+
+    sidebarFnc();
+
+    console.log($(sidebar).innerHeight())
+    console.log($(sidebar))
+
+    $(window).on('scroll', function () {
+        sidebarFnc();
+    });
+
+    function sidebarFnc() {
+        var windowHeight = $(window).height(), // 画面の高さ
+            st = $(window).scrollTop(); // スクロール量
+
+        // フェード
+        if (st > threshold) {
+            $(sidebar).addClass(fixedClass);
+        } else {
+            $(sidebar).removeClass(fixedClass);
+        }
+
+        var scrollSet = st + $(sidebar).innerHeight(),
+            targetOffset = $(target).offset().top;
+
+        if (scrollSet > targetOffset) {
+            $(sidebar).addClass(stopClass);
+        } else {
+            $(sidebar).removeClass(stopClass);
+        }
+    }
+});
