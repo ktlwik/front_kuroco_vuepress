@@ -181,11 +181,7 @@ $(window).on('load', function () {
     'use strict';
     var toggle = '.js-color-toggle',
         activeClass = 'is-dark';
-    console.log($(toggle))
     $(toggle).on('click', function () {
-        console.log('heres')
-        console.log(localStorage.getItem('colorMode'))
-        console.log($('body'))
         if (localStorage.getItem('colorMode') == null) {
             // localStorage にデータを保存する
             $('body').addClass(activeClass);

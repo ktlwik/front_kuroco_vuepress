@@ -1,5 +1,4 @@
 const { description } = require('../../package')
-const pageSuffix = '/'
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -52,7 +51,7 @@ module.exports = {
   themeConfig: {
     repo: '',
     activeHeaderLinks: false,
-    editLinks: false,
+    editLinks: true,
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
@@ -89,12 +88,12 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
  plugins: [
-      [
-          'vuepress-plugin-clean-urls',
-          {
-          
-          },
-      ],
+/*      [
+           'vuepress-plugin-clean-urls',
+            {
+           
+            },
+      ],*/
       [
           '@vuepress/search', 
           {
